@@ -1,0 +1,60 @@
+* {
+    font-family: 'Asheville Sans', sans-serif;
+    background-color: #FFFCFA;
+}
+
+
+.nav-container ul {
+    display: flex;
+    justify-content: right;
+    margin: 1.5rem;
+}
+
+.nav-container ul li {
+    margin: 1rem;
+    list-style: none;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.hero-left {
+
+    width: 70%;
+    margin-left: 5%;
+    padding: 4rem 0 0 3rem;
+
+}
+
+.hero-left h1 {
+    font-size: 5rem;
+    margin:0%;
+    padding-top: 5rem;
+    padding-right: 0%;
+
+}
+
+.hero-left p {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 2rem;
+}
+
+button {
+    float: left;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 1.5rem;
+}
+
+.hero-right img {
+    width: 40vw;
+    margin-right: 5%;
+    margin-top: 3%;
+    padding-right: 1.8rem;
+
+}
+
