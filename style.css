@@ -338,7 +338,7 @@ ul a:hover:after {
         
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px)  {
+@media only screen and (min-width: 600px) {
 
     nav {
         float: right;
@@ -352,7 +352,7 @@ ul a:hover:after {
        display: flex;
        flex-direction: row;
        padding-bottom: 3rem;
-       height: 50vh;
+       height: 100%
    }
 
    .hero-button {
@@ -395,43 +395,44 @@ ul a:hover:after {
        
 }
 
-@media screen and (orientation:landscape) {
-    .hero-container {
-        margin-top: 4rem;
-     }
-          
-      
-     .hero-right img {
-         width: 50vw;
-         height: 90vh;
-     }
-     
-     .about-container {
-        padding-top: 18rem;
-     }
-     
-     .about-shape {
-        width: 30vw;
-        height: 50vh;
-        padding-top: 3rem;
-     }
-     
-     
-        
-        
-}
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 736px) and (orientation:landscape){
+.hero-container {
+    height: 100%;
+}
+
+.about-container {
+    margin-top: 5rem;
+}
+
+.about-shape {
+    width: auto;
+    height: 50vh;
+}
 
 }
-/* Extra large devices (large laptops and desktops, 1200px and up) */
+
 @media only screen and (min-width: 1200px) {
+
+    .body {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
     .hero-container {
-        min-height: 100%;
+        height: 90vh;
     }
 
-    .about {
-        width: 40%;
-        
+    .hero-left h1 {
+        font-size: 6rem;
     }
-}
+
+    .hero-left p {
+        font-size: 1.5rem;
+    }
+
+    .about-shape {
+        height: 50vh;
+    }
+    }
+
+    
