@@ -490,10 +490,12 @@ ul a:hover:after {
     }
     .hero-container {
         height: 90vh;
+        margin-bottom: 8rem;
+        padding-top: 2rems;
     }
 
     .hero-left h1 {
-        font-size: 6rem;
+        font-size: 5rem;
     }
 
     .hero-left p {
@@ -502,6 +504,10 @@ ul a:hover:after {
 
     .about-shape {
         height: 50vh;
+    }
+
+    .hero-right img {
+        height:100%;
     }
     }
 
