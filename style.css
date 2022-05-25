@@ -11,6 +11,11 @@ body {
     background-repeat: no-repeat;
      
 }
+
+
+.nav-item-icon {
+    cursor: pointer;
+}
 .nav-container ul {
     display: flex;
     justify-content: right;
@@ -80,10 +85,12 @@ body {
         padding-left: 0;
     }
     
+    
     .nav-item {
         margin: 16px 0;
         color: white;
     }
+
 
     .nav-menu.active {
         left:0;
@@ -98,6 +105,7 @@ body {
 .hero-left {
     width: 70%;
     padding: 10%  0 0 7%;
+    animation: slideInFromLeft 0.8s ease-in;
 }
 
 .hero-left h1 {
@@ -133,6 +141,7 @@ body {
     width: 40vw;
     justify-self: center;
     margin-top: 3%;
+    animation: slideInFromRight 0.8s ease-in;
 
 }
 
@@ -221,14 +230,16 @@ i {
     border:black 2px solid;
     margin: 1rem;
     border-radius: 20px;
-    padding: 1rem;
+    padding-bottom: 1rem;
     max-width: 20%;
     flex-wrap: wrap;
 }
 .item-1 h1 ,.item-2 h1, .item-3 h1{
-    border:black 2px solid;
-    padding: 4rem 2rem;
-    border-radius: 20px;
+    font-size: 1.5rem;
+}
+.item-1 p ,.item-2 p, .item-3 p{
+    padding:0.5rem;
+    line-height: 1.5rem;
 }
 
 .project-title {
@@ -240,14 +251,25 @@ i {
 .project-container button {
     padding: 0.5rem 1rem;
     border-radius: 20px;
-    font-size: 1.5rem;
+    font-size: 1rem;
     cursor: pointer;
     transition: ease-in-out 0.3s;
     background-color: white;
 }
 
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .project-container button:hover {
     background-color: rgb(240, 149, 240);
+}
+
+.container-image {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
 }
 
 .email {
@@ -309,6 +331,42 @@ ul a:hover:after {
     padding: 1rem;
 }
 
+/* Animations */
+@keyframes slideInFromLeft{
+    0% {
+        transform:translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromRight{
+    0% {
+        transform:translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes slideInFromTop{
+    0% {
+        transform:translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes slideInFromBottom{
+    0% {
+        transform:translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     body {
@@ -328,6 +386,7 @@ ul a:hover:after {
         margin-left: 1rem;
     }
 
+    
     .hero-left p {
         font-size: 1rem;
         text-align: center;
@@ -395,11 +454,15 @@ ul a:hover:after {
             border:black 2px solid;
             margin: 1rem;
             border-radius: 20px;
-            padding: 1rem;
-            max-width: 70%;
+            max-width: 75vw;
             flex-wrap: wrap;
             align-content: center;
         }
+
+        .button-container {
+            justify-content: center;
+        }
+
 
         .email {
             font-size: 1rem;
@@ -463,9 +526,25 @@ ul a:hover:after {
            margin-top: 1rem;
        }
        
+       .project-container {
+           display: flex;
+           flex-direction: column;
+           align-content: center;
+           align-items: center;
+       }
+
+       .item-1 ,.item-2, .item-3 {
+        max-width: min(80vw, 25em);
+       }
+
+       .button-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
+/* Large devices (laptops/desktops, 736px and down, landscape) */
 @media only screen and (max-width: 736px) and (orientation:landscape){
 .hero-container {
     height: 100%;
@@ -482,6 +561,7 @@ ul a:hover:after {
 
 }
 
+/* Large devices (laptops/desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 
     .body {
@@ -491,7 +571,7 @@ ul a:hover:after {
     .hero-container {
         height: 90vh;
         margin-bottom: 8rem;
-        padding-top: 2rems;
+        padding-top: 2rem;
     }
 
     .hero-left h1 {
